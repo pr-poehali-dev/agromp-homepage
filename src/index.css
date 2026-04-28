@@ -4,36 +4,26 @@
 
 @layer base {
   :root {
-    --background: 0 0% 99%;
-    --foreground: 20 10% 12%;
-
+    --background: 0 0% 100%;
+    --foreground: 0 0% 12%;
     --card: 0 0% 100%;
-    --card-foreground: 20 10% 12%;
-
+    --card-foreground: 0 0% 12%;
     --popover: 0 0% 100%;
-    --popover-foreground: 20 10% 12%;
-
-    --primary: 20 10% 12%;
-    --primary-foreground: 0 0% 99%;
-
-    --secondary: 30 15% 94%;
-    --secondary-foreground: 20 10% 20%;
-
-    --muted: 30 10% 95%;
-    --muted-foreground: 20 8% 52%;
-
-    --accent: 30 15% 92%;
-    --accent-foreground: 20 10% 12%;
-
+    --popover-foreground: 0 0% 12%;
+    --primary: 123 69% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 120 20% 96%;
+    --secondary-foreground: 0 0% 12%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 120 20% 94%;
+    --accent-foreground: 0 0% 12%;
     --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 99%;
-
-    --border: 30 12% 88%;
-    --input: 30 12% 88%;
-    --ring: 20 10% 12%;
-
-    --radius: 0.25rem;
-
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 123 69% 42%;
+    --radius: 0.5rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -48,27 +38,53 @@
 @layer base {
   * {
     @apply border-border;
+    scroll-behavior: smooth;
   }
-
   body {
     @apply bg-background text-foreground;
-    font-family: "Golos Text", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    color: #1f1f1f;
   }
 }
 
 @layer utilities {
-  .font-display {
-    font-family: "Cormorant", serif;
+  .btn-green {
+    background-color: #21b82c;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 600;
+    transition:
+      background 0.2s,
+      transform 0.15s,
+      box-shadow 0.2s;
   }
-
+  .btn-green:hover {
+    background-color: #1a9424;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(33, 184, 44, 0.35);
+  }
+  .btn-outline-green {
+    border: 2px solid #21b82c;
+    color: #21b82c;
+    border-radius: 40px;
+    font-weight: 600;
+    background: transparent;
+    transition:
+      background 0.2s,
+      color 0.2s,
+      transform 0.15s;
+  }
+  .btn-outline-green:hover {
+    background-color: #21b82c;
+    color: #fff;
+    transform: translateY(-2px);
+  }
   .animate-fade-in {
-    animation: fadeIn 0.4s ease forwards;
+    animation: fadeIn 0.5s ease forwards;
   }
-
   .animate-slide-up {
-    animation: slideUp 0.5s ease forwards;
+    animation: slideUp 0.6s ease forwards;
   }
-
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -77,11 +93,10 @@
       opacity: 1;
     }
   }
-
   @keyframes slideUp {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(28px);
     }
     to {
       opacity: 1;

@@ -20,8 +20,12 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Golos Text', 'sans-serif'],
-				display: ['Cormorant', 'serif'],
+				sans: ['Montserrat', 'sans-serif'],
+			},
+			agro: {
+				DEFAULT: '#21b82c',
+				dark: '#1a9424',
+				light: '#e8f9e9',
 			},
 			colors: {
 				border: 'hsl(var(--border))',
